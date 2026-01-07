@@ -12,7 +12,15 @@ public class fechasYhoras {
 		// fecha actual
 		// formato Ingles
 		LocalDate hoy = LocalDate.now();
-		//System.out.println(hoy);
+		System.out.println(hoy);
+		
+		//TODO CONVIRTIENDO DE INT A FECHA(AÑO)
+		System.err.println("------CONVIRTIENDO DE INT A FECHA(AÑO)------");
+		int año =2026;
+		System.out.println("esto es un int --> "+año);
+		LocalDate fecha=LocalDate.of(año, 1, 1);
+		System.out.println("Esto es fecha -->  "+fecha);
+		
 
 		// hora actual
 		// hora minuto segundos y billonecimas de segundos
@@ -23,6 +31,7 @@ public class fechasYhoras {
 		// año-mes-dia
 		LocalDate cumple = LocalDate.of(1968, 12, 8);
 		//System.out.println(cumple);
+		
 
 		// hora:minutos
 		LocalTime citaMedica = LocalTime.of(10, 15);
@@ -60,7 +69,7 @@ public class fechasYhoras {
 		//restando 3 años
 		dentroDeUnAnyo.minusYears(3);
 		
-		
+		System.err.println("------TODO JUNTO CON MAS MILISEGUNDOS------");
 		LocalDateTime fechaYhora=LocalDateTime.now();
 		//combinando la fecha y hora
 		System.out.println(fechaYhora);
@@ -74,18 +83,29 @@ public class fechasYhoras {
 		//dd-MM-yyyy --> 05-12-2025
 		//dd-MMMM-yyyy --> 05-diciembre-2025
 		//EEEE, dd/MM/yy  --> viernes, 05/12/25
+		System.err.println("------RESTANDO FECHAS | DIFERENCIAS ENTRE FECHAS------");
+
 		
 		
+		System.err.println("------FECHA INVERTIDA | DIFERENTE FORMATO------");
 		DateTimeFormatter formato1= DateTimeFormatter.ofPattern("dd-MMMM-yyyy");
 		String fechaConFormato=fechaYhora.format(formato1);//UTILIZANDO EL FORMATO
 		System.out.println(fechaConFormato);
 		
+		System.err.println("------SOLO AÑO------");
+		DateTimeFormatter soloAño= DateTimeFormatter.ofPattern("yyyy");
+		String añoString=fechaYhora.format(soloAño);//UTILIZANDO EL FORMATO
+		System.out.println(añoString);
+		
+		
+		System.err.println("------HORA:MINUTOS------");
 		//TODO FORMATENAOD HORAS
 		//HH:MM --> 11:12
-		DateTimeFormatter formato2= DateTimeFormatter.ofPattern("HH:mm");
-		String horaConFormato=ahora.format(formato2);
-		System.out.println(horaConFormato);
+		DateTimeFormatter horaMinutos= DateTimeFormatter.ofPattern("HH:mm");
+		String formatoString=ahora.format(horaMinutos);
+		System.out.println(formatoString);
 		
+		System.err.println("------VALIDANDO FECHA CON UN TEXTO------");
 		//TODO VALIDANDO UNA FECHA
 		String fechaTXT="08/10/1980";
 		//creando formato
