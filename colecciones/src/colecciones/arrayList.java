@@ -71,6 +71,9 @@ public class arrayList {
 		
 		//Lista INMUTABLE
 		List<Integer> enteros2= List.of(23,45,2,65);
-
+		
+		for(int i=0;i<alumnos.size();i++) {
+			System.out.println(alumnos.get(i));
+		}
 	}
 }
