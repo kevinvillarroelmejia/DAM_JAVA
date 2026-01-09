@@ -1,6 +1,7 @@
 package colecciones;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class arrayList {
@@ -40,7 +41,6 @@ public class arrayList {
 			System.out.println("no esta en la lista");
 		}
 		
-		
 		//POSICION DEL ELEMENTO
 		//si esta repetido te devuelve el primero
 		int posicion=alumnos.indexOf("Lucia");//si no lo encuentra devuelve -1
@@ -75,6 +75,15 @@ public class arrayList {
 		for(int i=0;i<alumnos.size();i++) {
 			System.out.println(alumnos.get(i));
 		}
+		
+		//LA PRINCIPAL DIFERENCIA ENTRE ITERATOR Y FOR 
+		//ES QUE ITERATOR PUEDE RECORRER CUALQUIER ArrayList
+		//otra forma alternativa de recorer un ArrayList
+		Iterator<String> iterator=texto.iterator();
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next()); //esto es como el contador del for
+		}
+		
+		
 	}
-	
 }
