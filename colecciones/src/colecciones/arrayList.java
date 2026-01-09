@@ -76,4 +76,5 @@ public class arrayList {
 			System.out.println(alumnos.get(i));
 		}
 	}
+	
 }
