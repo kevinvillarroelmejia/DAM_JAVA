@@ -1,5 +1,7 @@
 package entidadBancaria;
 
+import java.util.ArrayList;
+
 public class Sucursal {
 	private Banco banco;
 	private String calle;
@@ -8,9 +10,12 @@ public class Sucursal {
 	private String Ciudad;
 	private String codigoSucursal;
 	
-	//lista de cuentas 
+	
+	//lista de cuentas
+	ArrayList<CuentasCorrientes> listaCuentas=new ArrayList<CuentasCorrientes>();
 	
 	//lista de clientes
+	ArrayList<Clientes> listaClientes =new ArrayList<Clientes>();
 	
 	public Sucursal(Banco banco,String calle,int numero ,int codigoPostal,String Ciudad,String codigoSucursal) {
 		this.banco=banco;
@@ -19,7 +24,9 @@ public class Sucursal {
 		this.codigoPostal=codigoPostal;
 		this.Ciudad=Ciudad;
 		this.codigoSucursal=codigoSucursal;
+		
+		//utilizando la funcion añadirSurcusal que esta en banco
+		banco.añadirSucursal(this);
 	}
-	
 	
 }
