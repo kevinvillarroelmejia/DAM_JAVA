@@ -12,10 +12,10 @@ public class Sucursal {
 	
 	
 	//lista de cuentas
-	ArrayList<CuentasCorrientes> listaCuentas=new ArrayList<CuentasCorrientes>();
+	private static ArrayList<CuentasCorrientes> listaCuentas=new ArrayList<CuentasCorrientes>();
 	
 	//lista de clientes
-	ArrayList<Clientes> listaClientes =new ArrayList<Clientes>();
+	private static ArrayList<Clientes> listaClientes =new ArrayList<Clientes>();
 	
 	public Sucursal(Banco banco,String calle,int numero ,int codigoPostal,String Ciudad,String codigoSucursal) {
 		this.banco=banco;
@@ -27,6 +27,26 @@ public class Sucursal {
 		
 		//utilizando la funcion añadirSurcusal que esta en banco
 		banco.añadirSucursal(this);
+	}
+	public void sucursales() {
+		Banco banco;
+		System.out.println("----------------");
+		System.out.println("Banco: "+this.banco.nombre);
+		System.out.println("Direccion: "+calle+","+numero+","+codigoPostal);
+		System.out.println("Ciudad: "+Ciudad);
+		System.out.println("Codigo surcursal: "+ codigoPostal);
+	}
+	//METODO AÑADIR CLIENTES
+	public static void añadirClientes(Clientes c) {
+		listaClientes.add(c);
+	}
+	
+	//METODO LISTAR CLIENTES
+	public static void listarClientes() {
+		for(Clientes c:listaClientes) {
+			c.mostrarCliente();
+			System.out.println("----------------");
+		}
 	}
 	
 }

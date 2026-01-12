@@ -17,6 +17,13 @@ public class Clientes {
 		this.NIF=nif;
 		this.Telefono=telefono;
 	}
+	public void mostrarCliente() {
+		System.out.println("Nombre: "+Nombre);
+		System.out.println("Apellido: "+Apellidos);
+		System.out.println("NIF: "+NIF);
+		System.out.println("Telefono: "+Telefono);
+
+	}
 	
 	
 }
