@@ -26,8 +26,12 @@ public class TareasTarjetas {
 	}
 
 	// METODO QUE ELIMINA UNA TAREA
+	//TODO si eliminamos por objeto y lo elimamos y no esta no da error
+	//TODO pero si lo eliminamos por posicion y no esta da FALSE
 	public void eliminarTarea() {
-		lista.remove(this);
+		if(lista.remove(this)==false){//this es el objeto desde el que llamamos a esta funcion
+			System.err.println("No puedo eliminar la tarea. No existe");
+		}
 	}
 
 	// METODO QUE MARQUE UNA TAREA COMO COMPLETADO
@@ -54,13 +58,14 @@ public class TareasTarjetas {
 	}
 
 	public static void mostrarTodaLaLista() {
+		//
 		//Iterator<TareasTarjetas> iterator = lista.iterator();
+		//hastNext es la condicion de salida que devuelve el objeto del ArrayList
 		//while (iterator.hasNext()) {
 		//System.out.println(iterator.next()); //esto es como el contador del for
 		//}
-		
-		for(int i=0;i<lista.size();i++) {
-			System.out.println(lista.get(i));
+		for(TareasTarjetas tarea : lista) {
+			tarea.mostrarTarea();
 		}
 	}
 

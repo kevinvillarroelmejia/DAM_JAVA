@@ -11,11 +11,13 @@ public class MAIN {
 				//t1.mostrarTarea();
 
 				t2.tareaCompletado();
+				t1.eliminarTarea(); 
+				//t1.eliminarTarea(); //da false por que t1 ya fue eliminado
 
-				t1.eliminarTarea();
 				//TareasTarjetas.mostrarTareasNoCompletadas();//metodo estatico
 				
 				TareasTarjetas.mostrarTodaLaLista();
+			
 				
 	}
 }
