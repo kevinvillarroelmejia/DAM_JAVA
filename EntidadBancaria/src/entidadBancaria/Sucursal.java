@@ -12,7 +12,7 @@ public class Sucursal {
 	
 	
 	//lista de cuentas
-	private static ArrayList<CuentasCorrientes> listaCuentas=new ArrayList<CuentasCorrientes>();
+	ArrayList<CuentasCorrientes> listaCuentas=new ArrayList<CuentasCorrientes>();
 	
 	//lista de clientes
 	private static ArrayList<Clientes> listaClientes =new ArrayList<Clientes>();
@@ -29,7 +29,6 @@ public class Sucursal {
 		banco.añadirSucursal(this);
 	}
 	public void sucursales() {
-		Banco banco;
 		System.out.println("----------------");
 		System.out.println("Banco: "+this.banco.nombre);
 		System.out.println("Direccion: "+calle+","+numero+","+codigoPostal);
@@ -37,7 +36,7 @@ public class Sucursal {
 		System.out.println("Codigo surcursal: "+ codigoPostal);
 	}
 	//METODO AÑADIR CLIENTES
-	public static void añadirClientes(Clientes c) {
+	public void ayadirClientes(Clientes c) {
 		listaClientes.add(c);
 	}
 	
@@ -45,8 +44,23 @@ public class Sucursal {
 	public static void listarClientes() {
 		for(Clientes c:listaClientes) {
 			c.mostrarCliente();
+			
 			System.out.println("----------------");
 		}
 	}
-	
+	//mostrando el cliente de otra manera
+	public static void listarClientes2() {
+		for(Clientes c:listaClientes) {
+			c.mostrarCliente();
+			System.out.println("Nombre: "+c.getNombre());
+			System.out.println("Apeliido "+c.getApellido());
+		}
+	}
+	public void ayadirCuenta(CuentasCorrientes c) {
+		this.listaCuentas.add(c);
+	}
+	//
+	public String getCodigoCompleto() {
+		return banco.getCodigo()+" "+this.codigoSucursal;
+	}
 }

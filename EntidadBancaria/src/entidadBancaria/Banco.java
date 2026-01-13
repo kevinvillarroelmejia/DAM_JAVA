@@ -24,4 +24,8 @@ public class Banco {
 		}
 	}
 	
+	public String getCodigo() {
+		return codigo;
+	}
+	
 }
