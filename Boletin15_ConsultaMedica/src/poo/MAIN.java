@@ -1,5 +1,7 @@
 package poo;
 
+import java.time.LocalDate;
+
 public class MAIN {
 
 	public static void main(String[] args) {
@@ -12,14 +14,19 @@ public class MAIN {
 		
 		Paciente kevin=new Paciente(quiron, "Kevin", "Villarroel", "99999999F", 111111111);
 		
-//		Consulta consulta1=new Consulta(, kevin, sainz, "Dolor de cabeza", "Paracetamol");
+		Consulta consulta1=new Consulta(LocalDate.now(),kevin, sainz, "Dolor de cabeza", "Paracetamol");
 		
-		sainz.cambiaCentro(quiron);//funcion que cambia de centro medico
+		Consulta c1=new Consulta(LocalDate.now(), kevin, sainz, "Dolos de estomago", "Tomar pastilla");
 		
-		ramonCajal.listaMedicos();
-		quiron.listaMedicos();
+//		sainz.cambiaCentro(quiron);//funcion que cambia de centro medico
 		
-		quiron.listaPacientes();
+//		ramonCajal.listaMedicos();
+//		
+//		quiron.listaMedicos();
+//		
+//		quiron.listaPacientes();
+		
+		kevin.listasConsultas();
 		
 	}
 

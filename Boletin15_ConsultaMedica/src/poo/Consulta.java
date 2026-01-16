@@ -11,7 +11,6 @@ public class Consulta {
 	private String consejoMedico;
 	private Paciente paciente;
 	private Medico medico;
-	private CentroMedico centroMedico;
 	
 	public Consulta(LocalDate fechaConsulta,Paciente paciente,Medico medico,String descripcion,String consejoMedico) {
 		this.fechaConsulta=fechaConsulta;
@@ -19,6 +18,20 @@ public class Consulta {
 		this.medico=medico;
 		this.descripcion=descripcion;
 		this.consejoMedico=consejoMedico;
-		this.centroMedico.ayadeConsulta(this);
+		
+		CentroMedico centro=this.medico.getCentro();
+		centro.ayadeConsulta(this);
+		this.medico.ayadeConsulta(this);
+		this.paciente.ayadeConsulta(this);
 	}
+	
+	public void mostrarConsulta() {
+		System.out.println("--------------------------------------------------");
+		System.out.println("Fecha de la consulta: "+this.fechaConsulta);
+		System.out.println("Paciente: "+paciente.getNombre());
+		System.out.println("Medico: "+medico.getNombre());
+		System.out.println("Descripcion de la consulta: "+descripcion);
+		System.out.println("Consejo del Medico: "+consejoMedico);
+	}
+	
 }

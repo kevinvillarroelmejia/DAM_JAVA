@@ -11,10 +11,11 @@ public class Paciente extends persona{
 		this.centroMedico.ayadePaciente(this);
 	}
 
-	@Override
+	
 	public void cambiaCentro(CentroMedico c) {
-		// TODO Auto-generated method stub
-		
+		this.centroMedico.eliminarPaciente(this);
+		this.centroMedico=c;
+		this.centroMedico.ayadePaciente(this);
 	}
 	
 	//FUNCION que permita cambiar aun paciente de centro medico

@@ -11,7 +11,6 @@ public class CentroMedico {
 	private ArrayList<Paciente> pacientesCentro=new ArrayList<Paciente>();
 	private ArrayList<Consulta> consultas=new ArrayList<Consulta>();
 	
-	
 	public CentroMedico(String nombre,String codigo) {
 		this.nombre=nombre;
 		this.codigo=codigo;
@@ -21,27 +20,21 @@ public class CentroMedico {
 	public void ayadeMedico(Medico m) {
 		medicosCentro.add(m);
 	}
-	//ELIMINAR MEDICO
-	public void eliminarMedico(Medico m) {
-		medicosCentro.remove(m);
-	}
-	
 	//AÑADIR PACIENTE
 	public void ayadePaciente(Paciente p) {
 		pacientesCentro.add(p);
 	}
+	//ELIMINAR MEDICO
+	public void eliminarMedico(Medico m) {
+		medicosCentro.remove(m);
+	}
 	//ELIMINAR PACIENTE
-	public void eliminarMedico(Paciente p) {
+	public void eliminarPaciente(Paciente p) {
 		medicosCentro.remove(p);
 	}
-	
-	
-	
 	public void ayadeConsulta(Consulta c) {
 		consultas.add(c);
 	}
-	
-	
 	//Listar los medicos de un centro
 	public void listaMedicos() {
 		for(Medico m:medicosCentro) {
@@ -58,8 +51,7 @@ public class CentroMedico {
 		}
 	}
 	
-	//Listar las consultas que se han realizado en un centro
-	
+
 	//Listar TODAS las consultas que ha realizado un paciente
 	
 	//Listar TODAS las consultas que ha intervenido un medico

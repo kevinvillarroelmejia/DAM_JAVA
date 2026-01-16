@@ -4,6 +4,8 @@ public class Medico extends persona{
 	private String Especialidad;
 	private String numColegiado;
 	
+	
+	
 	public Medico(CentroMedico centroMedico,String nombre,String apellido,String Especialidad,String numeroColegiado) {
 		super(centroMedico,nombre,apellido);
 		this.Especialidad=Especialidad;
