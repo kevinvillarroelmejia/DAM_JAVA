@@ -12,6 +12,8 @@ public class TeorioHashSet {
 		//HashSet es un array dinamico
 		/*TODO Pero no podemos meter elementos duplicados*/
 		
+		//No se pueden ordenar
+		
 		//Lo utilizamos cuando nos tenemos que eliminar lo duplicadoss
 		
 		//SI TENEMOS ELEMENTOS DUPLICADOS LOS VA ELIMINAR
