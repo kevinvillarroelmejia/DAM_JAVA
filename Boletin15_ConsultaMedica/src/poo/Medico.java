@@ -13,6 +13,7 @@ public class Medico extends persona{
 		this.centroMedico.ayadeMedico(this);//añadiendo centro cada vez que creemos un Medico
 	}
 
+	//FUNCION que permita cambiar aun medico de centro medico
 	public void cambiaCentro(CentroMedico c) {
 		this.centroMedico.eliminarMedico(this);//elimino el viejo
 		this.centroMedico=c;//cambio el viejo por el nuevo
@@ -21,6 +22,5 @@ public class Medico extends persona{
 	
 	
 	
-	//FUNCION que permita cambiar aun medico de centro medico
 
 }
