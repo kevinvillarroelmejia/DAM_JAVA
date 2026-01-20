@@ -1,4 +1,4 @@
-package ejercicios;
+package TeorioHashSet;
 
 import java.util.HashSet;
 

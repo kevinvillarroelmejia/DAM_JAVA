@@ -139,7 +139,7 @@ public class B4 {
 		//sus raíces cuadradas, 
 		//sus cuadrados 
 		//sus cubos
-		/*
+		
 		int numero = 2;
 		// NUMERO AL AZAR ES PRIMO O NO??
 		int contador = 0;
@@ -168,7 +168,7 @@ public class B4 {
 			System.out.println(numero +" |RaizCuadra --> " +numeroRaiz+" |Cuadrado --> "+ cuadrado+" |Cubo--> "+cubo);
 			numero++; // 
 		}
-		*/
+		
 		// ================ejercicio 7=============================
 		//Decimos que dos números primos son gemelos cuando están separados por un único
 		//número (el 11 y el 13, el 17 y el 19, el 41 y el 43, etc.). Escribir un programa que calcule
