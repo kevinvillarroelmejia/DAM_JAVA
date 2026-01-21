@@ -32,7 +32,6 @@ public class Clientes {
 		System.out.println("Telefono: "+Telefono);
 	}
 
-	
 
 	public String getNombre() {
 		return Nombre;
