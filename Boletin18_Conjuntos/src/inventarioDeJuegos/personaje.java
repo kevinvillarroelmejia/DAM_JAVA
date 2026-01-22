@@ -1,10 +1,9 @@
 package inventarioDeJuegos;
 
 import java.util.HashSet;
-
 public class personaje {
 	private String nombre;
-	private static HashSet<accesorios> inventarioAccesorios;
+	private  HashSet<accesorios> inventarioAccesorios;
 
 	//Personaje creado directamente con accesorio
 
@@ -13,14 +12,14 @@ public class personaje {
 //		this.inventarioAccesorios.add(accesorio);
 //	}
 	//Personaje creado SIN accesorio
-	public personaje(String nombre,HashSet<accesorios> accesorio) {
+	public personaje(String nombre) {
 		this.nombre=nombre;
 	}
-	public static void añadirObjetoInventario(accesorios a){
-		if(inventarioAccesorios.contains(a)||inventarioAccesorios.size()>=10) {
+	public void añadirObjetoInventario(accesorios a){
+		if(this.inventarioAccesorios.contains(a)||this.inventarioAccesorios.size()>=10) {
 			System.out.println("ERROR-accesorio encontrado-inventario lleno");
 		}else {
-			inventarioAccesorios.add(a);
+			this.inventarioAccesorios.add(a);
 		}
 		
 	}
