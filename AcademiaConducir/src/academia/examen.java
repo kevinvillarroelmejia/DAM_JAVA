@@ -1,0 +1,27 @@
+package academia;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+
+public class examen {
+	
+	private pregunta preguntas;
+	private int numPreguntas;
+	private ArrayList<pregunta> bancoPreguntas;
+	public examen(int numeroPreguntas,ArrayList<pregunta> listaPreguntas) {
+		this.numPreguntas=numeroPreguntas;
+		this.bancoPreguntas=listaPreguntas;
+		
+		//eligiendo 3 preguntas al aletoriamente
+		HashSet<pregunta> preguntasAletorias=new HashSet<pregunta>();
+		do {
+			int azar=(int)(Math.random()*3)+1;
+			preguntasAletorias.add(listaPreguntas.get(azar));
+		}while(preguntasAletorias.size()!=3);
+	}
+	public void mostrarExamen(){
+		for(pregunta p:bancoPreguntas) {
+			System.out.println(p.getPregunta());
+		}
+	}
+}
