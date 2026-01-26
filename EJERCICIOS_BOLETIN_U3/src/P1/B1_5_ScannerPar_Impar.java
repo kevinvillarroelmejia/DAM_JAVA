@@ -2,7 +2,7 @@ package P1;
 
 import java.util.Scanner;
 
-public class B1_5 {
+public class B1_5_ScannerPar_Impar {
 
 	public static void main(String[] args) {
 

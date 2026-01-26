@@ -1,6 +1,5 @@
 package boletin2;
 
-import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
 
 public class B2 {
@@ -331,7 +330,6 @@ public class B2 {
 			System.out.println("Tu sueldo se te quedaria en -> "+sueldoAnual+" - "+retencion+"="+sueldoNeto+"€");
 		}
 		*/
-		
 	}	
 }
 

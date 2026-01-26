@@ -1,6 +1,6 @@
 package P1;
 
-public class B1_17 {
+public class B1_17_quiniela {
 
 	public static void main(String[] args) {
 

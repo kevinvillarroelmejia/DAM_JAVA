@@ -2,7 +2,7 @@ package P1;
 
 import java.util.Scanner;
 
-public class B1_3 {
+public class B1_3_Multiplos {
 
 	public static void main(String[] args) {
 

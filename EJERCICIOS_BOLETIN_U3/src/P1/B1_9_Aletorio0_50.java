@@ -1,6 +1,6 @@
 package P1;
 
-public class B1_9 {
+public class B1_9_Aletorio0_50 {
 
 	public static void main(String[] args) {
 

@@ -2,7 +2,7 @@ package P1;
 
 import java.util.Scanner;
 
-public class B1_14 {
+public class B1_14_NumAletorioEntreDosRangos {
 
 	public static void main(String[] args) {
 

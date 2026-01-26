@@ -6,7 +6,6 @@ public class CentroMedico {
 	private String nombre;
 	private String codigo;
 	
-	
 	private ArrayList<Medico> medicosCentro=new ArrayList<Medico>();
 	private ArrayList<Paciente> pacientesCentro=new ArrayList<Paciente>();
 	private ArrayList<Consulta> consultas=new ArrayList<Consulta>();

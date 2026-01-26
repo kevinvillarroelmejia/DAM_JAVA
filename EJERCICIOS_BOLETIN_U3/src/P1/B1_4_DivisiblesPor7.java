@@ -1,6 +1,6 @@
 package P1;
 
-public class B1_4 {
+public class B1_4_DivisiblesPor7 {
 
 	public static void main(String[] args) {
 
