@@ -22,13 +22,17 @@ public class pregunta {
 	public static ArrayList<pregunta> getBancoDePreguntas() {
 		return bancoDePreguntas;
 	}
-	public void mostrarPregunta() {
+	public void  mostrarPregunta() {
 		System.out.println(this.pregunta);
 		ArrayList<String> respuestasAletorias=new ArrayList<String>();
 		respuestasAletorias.add(this.respuestaBuena);
 		respuestasAletorias.add(this.respuestaMala1);
 		respuestasAletorias.add(this.respuestaMala2);
 		int azar=(int)(Math.random()*3)+1;
+		System.out.println(respuestasAletorias.get(azar));
+		
+		
+
 	}
 	public String getPregunta() {
 		return pregunta;

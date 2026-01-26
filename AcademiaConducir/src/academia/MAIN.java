@@ -5,6 +5,7 @@ public class MAIN {
 	public static void main(String[] args) {
 //		ArrayList<pregunta> examen=new ArrayList<pregunta>();
 		
+		
 		pregunta p1=new pregunta("¿Que señales son azules?", "peligro", "no hay señales azules", "informativas");
 		pregunta p2=new pregunta("¿Que velocidad maxima en autopistas?", "la que de tu coche", "60", "20");
 		pregunta p3=new pregunta("¿Puedo circular eb caballo por autovia?", "Si si llevas gorro de vaquero", "En casos especiales", "De ninguna forma");

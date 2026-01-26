@@ -5,9 +5,9 @@ import java.util.HashSet;
 
 public class examen {
 	
-	private pregunta preguntas;
+//	private pregunta preguntas;
 	private int numPreguntas;
-	private ArrayList<pregunta> bancoPreguntas;
+	private ArrayList<pregunta> bancoPreguntas=new ArrayList<pregunta>();
 	public examen(int numeroPreguntas,ArrayList<pregunta> listaPreguntas) {
 		this.numPreguntas=numeroPreguntas;
 		this.bancoPreguntas=listaPreguntas;
@@ -21,7 +21,8 @@ public class examen {
 	}
 	public void mostrarExamen(){
 		for(pregunta p:bancoPreguntas) {
-			System.out.println(p.getPregunta());
+			p.mostrarPregunta();
 		}
+		
 	}
 }
