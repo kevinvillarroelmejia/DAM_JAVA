@@ -57,7 +57,7 @@ public class arrayList {
 		
 		System.out.println(enteros.remove((Integer)3));
 		
-		//Inicializar un ArrayList
+		//Vaciando un ArrayList
 		enteros.clear();
 		
 		//preguntar si esta vacia
