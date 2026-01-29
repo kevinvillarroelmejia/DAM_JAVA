@@ -15,8 +15,4 @@ public class JefesDeProyecto extends Empleados{
 	public void eliminarJefe(Proyecto p) {
 		listaJefesProyecto.remove(this);
 	}
-
-
-	
-
 }
