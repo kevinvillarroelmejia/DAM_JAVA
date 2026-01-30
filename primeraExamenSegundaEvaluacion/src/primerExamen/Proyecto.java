@@ -28,6 +28,8 @@ public class Proyecto {
 		listaProyectos.add(this);
 	}
 	
+	
+	
 	public void inforProyecto() {
 		System.out.println("");
 		System.out.println("Proyecto: "+this.codigo+". "+this.nombre);
