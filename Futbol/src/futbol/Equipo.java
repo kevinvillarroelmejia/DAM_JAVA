@@ -29,8 +29,42 @@ public class Equipo {
 		return nombre;
 	}
 	
-	public void mostrarEquipo() {
-		
+	public int getPartidosGanados() {
+		return partidosGanados;
 	}
+	public int getPartidosEmpatados() {
+		return partidosEmpatados;
+	}
+	public int getPartidosPerdidos() {
+		return partidosPerdidos;
+	}
+	public int getGolesAFavor() {
+		return golesAFavor;
+	}
+	public int getGolesEnContra() {
+		return golesEnContra;
+	}
+	public int getPuntos() {
+		return puntos;
+	}
+	public void setPartidosGanados(int partidosGanados) {
+		this.partidosGanados = partidosGanados;
+	}
+	public void setPartidosEmpatados(int partidosEmpatados) {
+		this.partidosEmpatados = partidosEmpatados;
+	}
+	public void setPartidosPerdidos(int partidosPerdidos) {
+		this.partidosPerdidos = partidosPerdidos;
+	}
+	public void setGolesAFavor(int golesAFavor) {
+		this.golesAFavor = golesAFavor;
+	}
+	public void setGolesEnContra(int golesEnContra) {
+		this.golesEnContra = golesEnContra;
+	}
+	public void setPuntos(int puntos) {
+		this.puntos = puntos;
+	}
+
 	
 }

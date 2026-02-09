@@ -1,6 +1,5 @@
 package futbol;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
@@ -32,7 +31,11 @@ public class Main {
 		
 		Arbitro arbitro1=new Arbitro("Alexandru");
 		Arbitro arbitro2=new Arbitro("Andrea");
-
+		
+		Partido p1=new Partido(rayo, sevilla);
+		p1.resultadoPartido(0, 3);
+		
+		laLiga.verClasificacion();
 
 	}
 
