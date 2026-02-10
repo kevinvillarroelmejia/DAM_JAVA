@@ -65,6 +65,26 @@ public class Equipo {
 	public void setPuntos(int puntos) {
 		this.puntos = puntos;
 	}
+	
+
+	public void ganaPartido() {
+		this.partidosGanados++;
+		this.puntos+=3;	
+	}
+	
+	public void pierdePartido() {
+		this.partidosEmpatados++;
+	}
+	
+	public void empataPartido() {
+		this.partidosEmpatados++;
+		this.puntos++;
+	}
+	
+	public void cambiaGoles(int aFavor, int enContra) {
+		this.golesAFavor+=aFavor;
+		this.golesEnContra+=enContra;
+	}
 
 	
 }

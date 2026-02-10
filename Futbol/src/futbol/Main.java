@@ -33,7 +33,13 @@ public class Main {
 		Arbitro arbitro2=new Arbitro("Andrea");
 		
 		Partido p1=new Partido(rayo, sevilla);
+		Partido p2=new Partido(elMadrid, atleti);
+		Partido p3=new Partido(elMadrid, betis);
+		
 		p1.resultadoPartido(0, 3);
+		p2.resultadoPartido(5, 4);
+		p3.resultadoPartido(3, 2);
+		
 		
 		laLiga.verClasificacion();
 
