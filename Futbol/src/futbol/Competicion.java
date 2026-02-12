@@ -50,26 +50,42 @@ public class Competicion {
 		}
 	}
 	
-	/**/
+	/*CODIGO DE ORDENACION DE SELECCION*/
 	private ArrayList<Equipo> ordenarClasificacion() {
 		ArrayList<Equipo> listaOrdenada = new ArrayList<Equipo>();
 		//convirtiendo un HastSet en un Arraylist
 		ArrayList<Equipo> desordenada=new ArrayList<Equipo>(this.listaEquipos);
 		while (desordenada.size() != 0) {
-			int mayor = -1;
-			for (Equipo n : desordenada) {
-				if (n.getPuntos() > mayor) {
-					mayor = n.getPuntos();
-				}
+			int puntosMayor = -1;
+			Equipo elqueMasPuntosTiene=null;
+			for (Equipo equipo : desordenada) {
+				elqueMasPuntosTiene=elMejorEquipo(equipo, elqueMasPuntosTiene);
 			}
-			desordenada.remove((Integer) mayor);
-			listaOrdenada.add(mayor);
+			desordenada.remove(elqueMasPuntosTiene);
+			listaOrdenada.add(elqueMasPuntosTiene);
 		}
-		
-		
 		return listaOrdenada;
 	}
 	
+	public Equipo elMejorEquipo(Equipo equipo1,Equipo equipo2) {
+		Equipo elegido=null;
+		
+		if(equipo2==null) {
+			elegido=equipo1;
+		}else if(equipo1.getPuntos()>equipo2.getPuntos()) {
+			elegido=equipo1;
+		}else if (equipo1.getPuntos()==equipo2.getPuntos()){
+			int dif1=equipo1.getGolesAFavor()-equipo1.getGolesEnContra();
+			int dif2=equipo2.getGolesAFavor()-equipo2.getGolesEnContra();
+			if(dif1>dif2) {
+				elegido=equipo1;
+			}else {
+				elegido=equipo2;
+			}
+		}else
+			elegido=equipo2;
+		return elegido;
+	}
 	//algoritmo de ordenacion
 	//goles a favor y goles en contra
 

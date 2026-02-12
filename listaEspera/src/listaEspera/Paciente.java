@@ -19,7 +19,7 @@ public class Paciente extends Persona{
 	public void listaCitas() {
 		for(Map.Entry<Especialidad, Medico>indice:listaMedicos.entrySet()) {
 			//corregir esto no podemos imprimir un objeto como Especialidad o Medico
-			System.out.println("Especialidad: ",indice.getKey() +"Medico: ",indice.getValue());
+			System.out.println("Especialidad: "+indice.getKey() +"Medico: "+indice.getValue());
 		}
 	}
 	
