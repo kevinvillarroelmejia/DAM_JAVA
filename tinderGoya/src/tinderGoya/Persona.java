@@ -1,6 +1,7 @@
 package tinderGoya;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 
 abstract class Persona {
@@ -24,5 +25,46 @@ abstract class Persona {
 			this.edadMinimaBuscada=edadMinimaBuscada;
 		}
 	}
+
+	public int getQueBusca() {
+		return queBusca;
+	}
+
+	public void mostrarDatos() {
+		System.out.printf("Nombre: %s. Edad %d\n",this.nombre,this.getEdad());
+		//comparra los tipos
+		if(this instanceof Hombre) {//el objeto es hombre?
+			System.out.printf("Soy un hombre: ");
+		}else if (this instanceof Mujer) { //el objeto es Mujer?
+			System.out.printf("Soy una Mujer: ");
+		}else {
+			System.out.println("No me indentifico con nada: ");
+		}
+		//segun lo que busca
+		if(this.queBusca==0) {
+			System.out.println("Busco lo que sea");
+		}else if(this.queBusca==1) {
+			System.out.println("Busco un hombre");
+		}else {
+			System.out.println("Busco una mujer");
+		}
+		
+		
+		//preferencia de edad
+		if(this.edadMinimaBuscada==18 &&this.edadMaximaBuscada==200) {
+			System.out.println("No tengo preferencias en cuanto a tu edad");
+		}else {
+			System.out.printf("Busco a una persona entre %d y %d años\n",this.edadMinimaBuscada,this.edadMaximaBuscada);
+		}
+	}
+	//para saber la edad de la persona
+	public int getEdad() {
+		LocalDate hoy=LocalDate.now();
+		//tiempo entre dos fechas
+		Period periodo=Period.between(this.fechaNacimiento,hoy);
+		return periodo.getYears();
+	}
+	//instanceOF 
+	
 	
 }
