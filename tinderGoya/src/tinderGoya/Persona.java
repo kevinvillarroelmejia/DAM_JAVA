@@ -54,7 +54,7 @@ abstract class Persona {
 		if(this.edadMinimaBuscada==18 &&this.edadMaximaBuscada==200) {
 			System.out.println("No tengo preferencias en cuanto a tu edad");
 		}else {
-			System.out.printf("Busco a una persona entre %d y %d años\n",this.edadMinimaBuscada,this.edadMaximaBuscada);
+			System.out.printf("Busco a una persona entre %d y %d años\n\n",this.edadMinimaBuscada,this.edadMaximaBuscada);
 		}
 	}
 	//para saber la edad de la persona
@@ -65,6 +65,22 @@ abstract class Persona {
 		return periodo.getYears();
 	}
 	//instanceOF 
+	
+	public boolean esMatch(Persona p) {
+		Boolean match=true;
+		int edad1=this.getEdad();
+		int edad2=p.getEdad();
+		//condiciones de edad
+		if(edad1<p.edadMinimaBuscada
+				||edad1>p.edadMaximaBuscada
+				||edad2<this.edadMinimaBuscada
+				||edad2>this.edadMaximaBuscada) {
+			match=false;
+			
+		}
+		
+		return false;
+	}
 	
 	
 }

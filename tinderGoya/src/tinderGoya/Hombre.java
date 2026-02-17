@@ -13,4 +13,10 @@ public class Hombre extends Persona{
 		app.ayade(this);//funcion que añade directamente a la lista
 	}
 
+	public boolean esMatch(Mujer m) {
+		
+		
+		return false;
+	}
+
 }
