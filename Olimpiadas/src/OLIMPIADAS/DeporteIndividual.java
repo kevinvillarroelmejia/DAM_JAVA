@@ -1,6 +1,8 @@
 package OLIMPIADAS;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class DeporteIndividual extends Deporte {
 
@@ -8,7 +10,6 @@ public class DeporteIndividual extends Deporte {
 
 	public DeporteIndividual(String nombreDeporte) {
 		super(nombreDeporte);
-
 	}
 
 	public void resultado(Participante p, double marca) {
@@ -27,12 +28,14 @@ public class DeporteIndividual extends Deporte {
 //		}
 		System.out.printf("");
 		// 1.- HACEMOS UNA COPIA DE LA LISTA
-		HashMap<Participante, Double> copia = new HashMap<Participante, Double>();
-
+		HashMap<Participante, Double> copia = new HashMap<Participante, Double>(listaParticipantes);
 		// 2.- BUSCAMOS EL MAYOR
-		System.out.println("ORO");
-		Participante p = obtenerMayor(copia);
-		double marca = copia.get(p);
+		obtenerMedalla("ORO", copia);
+		obtenerMedalla("PLATA", copia);
+		obtenerMedalla("BRONCE", copia);
+
+		// Participante p = obtenerMayor(copia);
+		// double marca = copia.get(p);
 
 		// 3.- LO IMPRIMIMOS Y LO BORRAMOS
 		// 3.1.-Comprobamos que no haya mas participantes con la misma marca.
@@ -40,9 +43,34 @@ public class DeporteIndividual extends Deporte {
 		// 4.- REPETIMOS 2 Y 3(3.1) DOS VECES MAS
 	}
 
+	public void obtenerMedalla(String medalla, HashMap<Participante, Double> copia) {
+		System.out.println(medalla);
+		if (copia.size() != 0) {
+			Participante p = obtenerMayor(copia);
+			double mayor = copia.get(p);
+			System.out.printf("%s con %.2f puntos \n", p.getNombre(), mayor);
+			copia.remove(p);
+			// LO RECORREMOS CON UN ITERATOR POR QUE TENEMOS QUE BORRAR MIENTRAS QUE
+			// RECORREMOS
+			Iterator<Map.Entry<Participante, Double>> iterator = copia.entrySet().iterator();
+			while (iterator.hasNext()) {
+				Map.Entry<Participante, Double> elemento = iterator.next();
+				if (elemento.getValue() == mayor) {
+					System.out.printf("%s con %.2f puntos\n", elemento.getKey().getNombre(), mayor);
+					// borramos el objeto
+					iterator.remove();
+				}
+			}
+		} else {
+			System.out.println("No hay participantes en esta competicion");
+		}
+	}
+
+	// BUSCAMOS EL MAYOR
 	public Participante obtenerMayor(HashMap<Participante, Double> lista) {
 		double mayor = -1;
 		Participante pMayor = null;
+
 		for (Participante p : lista.keySet()) {
 			if (lista.get(p) > mayor) {
 				mayor = lista.get(p);
@@ -50,7 +78,7 @@ public class DeporteIndividual extends Deporte {
 			}
 		}
 
-		return null;
+		return pMayor;
 	}
 
 }

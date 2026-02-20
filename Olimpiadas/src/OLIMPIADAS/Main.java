@@ -8,6 +8,8 @@ public class Main {
 		Participante p2 = new Participante("Svelanj", "Noruega");
 		Participante p3 = new Participante("Manolo", "España");
 		Participante p4=new Participante("Angel", "Filipinas");
+		Participante p5 = new Participante("Dario", "Brasil");
+		Participante p6=new Participante("Carlos", "Peru");
 		
 		DeporteIndividual d1 = new DeporteIndividual("SnowBoard");
 		DeporteEquipos d2 = new DeporteEquipos("Curling");
@@ -25,6 +27,9 @@ public class Main {
 		d1.resultado(p3, 99.9);
 		d1.resultado(p4, 1.9);
 		d1.resultado(p3, 103.1);//sobreEscribimos el anterior
+		
+		d1.resultado(p5, 103.1);//jugadores con valor repetido
+		d1.resultado(p6, 99.9);
 		
 		d1.obtenerPodium();
 
