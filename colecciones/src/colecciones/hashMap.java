@@ -24,7 +24,7 @@ public class hashMap {
 		System.out.println(sueldos);
 		System.out.println("==============================================================");
 
-		//Eliminando pareja clave:valor
+		//TODO Eliminando pareja clave:valor
 		sueldos.remove("Kevin");
 		System.out.println(sueldos);
 		System.out.println("==============================================================");

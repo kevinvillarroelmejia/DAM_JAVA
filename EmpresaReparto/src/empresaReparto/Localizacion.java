@@ -11,22 +11,17 @@ public class Localizacion {
 
 	public double distancia(Localizacion destino) {
 
+		double distancia = Math.hypot(x, y);//sacar la hipotenusa de dos puntos
+		return distancia;
 		//int xMin=Math.min(destino.getX(), this.x);
 		//int yMin=Math.max(destino.y, this.y);
-		
-		double distancia = Math.hypot(x, y);//sacar la hipotenusa de dos puntos
-		
-		return distancia;
 	}
-
 	public int getX() {
 		return x;
 	}
-
 	public int getY() {
 		return y;
 	}
-
 //	public void setX(int x) {
 //		this.x = x;
 //	}

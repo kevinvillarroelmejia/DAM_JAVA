@@ -18,8 +18,13 @@ public class Main {
 		c1.calcularRuta();
 		c1.mostrarRuta();
 		
-		Localizacion origen=new Localizacion(0, 0); //la cede desde donde arrancan los camiones
-		Paquetes proximo=Paquetes.destinoMasCernano();
+//		Localizacion origen=new Localizacion(0, 0); //la cede desde donde arrancan los camiones
+//		Paquetes proximo=Paquetes.destinoMasCernano(origen);
+//		if(proximo==null) {
+//			System.out.println("No hay paquetes para entregar");
+//		}else {
+//			System.out.printf("El paquete mas cercano esta en las coordenadas %d:%d",proximo.getX(),proximo.getY());
+//		}
 	}
 
 }
