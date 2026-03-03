@@ -1,8 +1,5 @@
 package expreciones_regulares;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class expreciones_regulares {
 
 	public static void main(String[] args) {

@@ -81,7 +81,6 @@ public class FicheroTexto {
 
 	private static void metodo3() {
 		ArrayList<String >lineas=null;
-
 		try {
 			Path fichero=Path.of("/home/alumno/Escritorio/quijote.txt");//objeto que simboliza el fichero
 			//guarda CADA linea en una celda del ArrayList
@@ -106,7 +105,6 @@ public class FicheroTexto {
 			System.out.println(e.getMessage());
 		}
 		System.out.println(contenido);
-		
 	}
 }
 
