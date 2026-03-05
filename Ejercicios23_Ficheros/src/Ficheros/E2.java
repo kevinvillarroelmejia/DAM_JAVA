@@ -27,7 +27,9 @@ Scanner teclado=new Scanner(System.in);
 		ArrayList<String> lineas=devuelveContenido(nombreFichero);
 		System.out.println(lineas);
 		System.out.printf("Numero de lineas: %d ",contadorLineas(lineas));
-		
+		if(lineasEnBlanco(lineas)) {
+			
+		}
 		
 	}
 	public static boolean existeElFichero(String fichero) {
@@ -62,8 +64,8 @@ Scanner teclado=new Scanner(System.in);
 			if(linea.equalsIgnoreCase("")) {
 				contador++;
 			}
-			if(linea.) {
-				
+			if(!linea.equalsIgnoreCase("  ")) {
+				contador++;
 			}
 		}
 		return contador;
