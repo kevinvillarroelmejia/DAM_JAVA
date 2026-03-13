@@ -59,7 +59,7 @@ public class FicheroTexto {
 			System.out.println(e.getMessage());
 		}
 	}
-
+	//LEYENDO LINEA A LINEA
 	public static void metodo2() {
 		try {
 			File fichero = new File("/home/alumno/Escritorio/quijote.txt");
