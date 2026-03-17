@@ -66,17 +66,19 @@ public class Tarea {
 		}catch (Exception e) {
 		}
 	}
+	
+	//CORREGIR ESTO
 	public static ArrayList<Tarea> ordenarPorPrioridad(ArrayList<Tarea> listaDesordenada) {
         ArrayList<Tarea> ordenada = new ArrayList<>();
         while (listaDesordenada.size() != 0) {
-            int pri = ordenada.get(2);
+            Tarea tarea;
             for (Tarea n : listaDesordenada) {
-                if (n. > mayor) {
-                    mayor = n;
+                if (n. > pri) {
+                    pri = n;
                 }
             }
-            desordenada.remove((Integer) mayor);
-            ordenada.add(mayor);
+            listaDesordenada.remove((Integer) pri);
+            ordenada.add(pri);
         }
         return ordenada;
 	}
