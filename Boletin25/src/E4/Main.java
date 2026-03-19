@@ -8,6 +8,9 @@ public class Main {
 		Tarea.leerFicheroTareas(nombreFichero);
 		Tarea t1=new Tarea("E55", "Dar de comer a los peces", 8, false);
 		Tarea t2=new Tarea("E56", "Sacar la basura", 1, true);
+		
+		Tarea.ordenarPorBurbuja(null);
+		
 		t1.mostrarTarea();
 		t2.mostrarTarea();
 		

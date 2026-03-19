@@ -67,18 +67,22 @@ public class Tarea {
 		}
 	}
 	
+	public int getPrioridad() {
+		return prioridad;
+	}
+
 	//CORREGIR ESTO
 	public static ArrayList<Tarea> ordenarPorPrioridad(ArrayList<Tarea> listaDesordenada) {
         ArrayList<Tarea> ordenada = new ArrayList<>();
         while (listaDesordenada.size() != 0) {
-            Tarea tarea;
-            for (Tarea n : listaDesordenada) {
-                if (n. > pri) {
-                    pri = n;
+            Tarea mayor=listaDesordenada.get(2);
+            for (Tarea n : listaDesordenada) { 
+                if (n.getPrioridad() > mayor.getPrioridad()) {
+                    mayor = n;
                 }
             }
-            listaDesordenada.remove((Integer) pri);
-            ordenada.add(pri);
+            listaDesordenada.remove(mayor);
+            ordenada.add(mayor);
         }
         return ordenada;
 	}
