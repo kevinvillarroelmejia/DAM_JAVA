@@ -40,8 +40,13 @@ public class fichero_AccesoAletorio {
 	// r cuando solo leemos leer
 	// rw cuando queremos leer y escribir
 
-	private static void leerTodosRegistros(String fichero) {
-		
+	private static void leerTodosRegistros(String fichero) throws Exception{
+		try (RandomAccessFile raf = new RandomAccessFile(fichero, "rw")) {
+			int numRegistro=(int)(raf.length()/TAMAÑO_REGISTRO);
+			
+			// TERMINAR ESTO
+				
+		}
 	}
 
 	public static void nuevoRegistro(String fichero, String nombre, int edad) throws Exception{
