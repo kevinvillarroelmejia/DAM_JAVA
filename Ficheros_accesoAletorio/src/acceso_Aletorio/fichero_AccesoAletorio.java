@@ -41,7 +41,6 @@ public class fichero_AccesoAletorio {
 	// rw cuando queremos leer y escribir
 
 	private static void leerTodosRegistros(String fichero) {
-		// TODO Auto-generated method stub
 		
 	}
 
@@ -119,9 +118,7 @@ public class fichero_AccesoAletorio {
 			nombre=nombre+c;
 		}
 		return nombre.trim();
-	}
-	
-	
+	}	
 	
 
 }
