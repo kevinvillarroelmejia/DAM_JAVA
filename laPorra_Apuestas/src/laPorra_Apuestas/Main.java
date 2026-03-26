@@ -39,9 +39,14 @@ public class Main {
 			}
 		}
 	}
-
+	
 	public void hacerSorteo(RandomAccessFile raf) {
-
+		
+	}
+	
+	
+	public void listaParticipantes(String fichero) {
+		
 	}
 
 }
