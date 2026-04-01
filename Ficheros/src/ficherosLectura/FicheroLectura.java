@@ -1,4 +1,4 @@
-package Fichero;
+package ficherosLectura;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -9,7 +9,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class FicheroTexto {
+public class FicheroLectura {
 
 	public static void main(String[] args) {
 		// ===FICHERO TEXTO===
