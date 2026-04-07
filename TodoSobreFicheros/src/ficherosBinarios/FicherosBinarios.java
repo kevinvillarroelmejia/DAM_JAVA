@@ -1,4 +1,4 @@
-package FicherosBinarios;
+package ficherosBinarios;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ficherosBinarios {
+public class FicherosBinarios {
 
 	public static void main(String[] args) {
 		/* FICHEROS BINARIOS */

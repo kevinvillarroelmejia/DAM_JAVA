@@ -79,11 +79,10 @@ public class E1_ficheros {
 			System.out.println(e.getMessage());
 		}
 		return lineas;
-		
 	}
 	public static int cuentaPalabras(String linea,String palabra) {
 		int contadorPalabra=0;
-		String[] palabras=linea.split("\\s+");
+		String[] palabras=linea.split("\\s+");// separador uno o más espacios en blanco.
 		for(String p:palabras) {
 			if(p.equalsIgnoreCase(palabra)) {
 				contadorPalabra++;

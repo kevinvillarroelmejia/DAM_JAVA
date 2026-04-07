@@ -1,0 +1,58 @@
+TIPOS DE FICHEROS EN JAVA
+=========================
+
+1. FICHEROS DE TEXTO (acceso secuencial)
+-----------------------------------------
+Clases: FileReader, FileWriter, BufferedReader, BufferedWriter, PrintWriter
+
+Cuándo usarlo:
+  ✓ Archivos .txt legibles por humanos
+  ✓ Simplicidad
+  ✓ Leer/escribir el fichero completo
+  ✗ No usar para datos primitivos
+
+Ejemplo:
+  BufferedReader br = new BufferedReader(new FileReader("fichero.txt"));
+  String linea = br.readLine();
+  br.close();
+
+
+2. FICHEROS BINARIOS (datos / objetos)
+---------------------------------------
+Clases: FileInputStream, FileOutputStream, DataInputStream, ObjectInputStream, ObjectOutputStream
+
+Cuándo usarlo:
+  ✓ Guardar objetos Java (serialización)
+  ✓ Datos primitivos: int, double, boolean...
+  ✓ Menor tamaño que texto
+  ✗ No legible por humanos
+
+Ejemplo:
+  ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream("datos.bin"));
+  os.writeObject(miObjeto);
+  os.close();
+
+
+3. FICHEROS DE ACCESO ALEATORIO (posición directa)
+---------------------------------------------------
+Clases: RandomAccessFile, FileChannel (NIO)
+Métodos clave: seek(posición), read(), write()
+
+Cuándo usarlo:
+  ✓ Ir directamente a una posición concreta
+  ✓ Registros de tamaño fijo
+  ✓ Modificar parte del fichero sin releer todo
+  ✗ No usar si los datos tienen tamaño variable
+
+Ejemplo:
+  RandomAccessFile r = new RandomAccessFile("fichero.dat", "rw");
+  r.seek(numRegistro * tamañoRegistro);  // saltar al registro N
+  r.writeInt(nuevoValor);
+  r.close();
+
+
+REGLA PARA ELEGIR:
+  ¿Texto legible?         → Fichero de texto
+  ¿Objetos/primitivos?    → Fichero binario
+  ¿Posición directa?      → Acceso aleatorio
+

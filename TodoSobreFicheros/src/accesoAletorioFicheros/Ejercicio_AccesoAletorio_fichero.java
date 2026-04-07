@@ -1,9 +1,10 @@
-package acceso_Aletorio;
+package accesoAletorioFicheros;
 
 import java.io.RandomAccessFile;
 import java.util.HashMap;
 
-public class fichero_AccesoAletorio {
+public class Ejercicio_AccesoAletorio_fichero {
+	
 
 	static final int TAMAÑO_NOMBRE = 20;
 	static final int TAMAÑO_REGISTRO = (TAMAÑO_NOMBRE * 2) + 4; // CONSTANTE -- NO SE PUEDE MODIFICAR EL VALOR
