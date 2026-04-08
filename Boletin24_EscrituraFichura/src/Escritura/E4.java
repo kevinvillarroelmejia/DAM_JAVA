@@ -47,7 +47,7 @@ public class E4 {
 	public static String invertirContenido(String linea) {
 		String invertida="";
 		for(int i=0;i<linea.length();i++) {
-			invertida=linea.charAt(i)+invertida;
+			invertida=linea.charAt(i)+invertida;//invirtiendo la linea
 		}
 		return invertida;
 	}
