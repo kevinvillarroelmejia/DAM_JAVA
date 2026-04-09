@@ -36,6 +36,7 @@ public class Ejercicio1 {
 		return diccionario;
 	}
 
+	
 	public static void AnimesConelMismoID(int ID, String fichero) {
 		ArrayList<String> listaDePersonajes = new ArrayList<String>();
 		int numeroID=0;
