@@ -1,7 +1,8 @@
+package Ficheros;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class Ejercicio4 {
+public class E4 {
 
     public static void main(String[] args) {
 

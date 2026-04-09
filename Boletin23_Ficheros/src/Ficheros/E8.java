@@ -1,8 +1,9 @@
+package Ficheros;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 
-public class Ejercicio8 {
+public class E8 {
 
     // Las tres categorías válidas como constante
     static final String[] CATEGORIAS_VALIDAS = {"Familia", "Amigo", "Conocido"};

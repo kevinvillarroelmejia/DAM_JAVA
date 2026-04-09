@@ -1,9 +1,10 @@
+package Ficheros;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Ejercicio11 {
+public class E11 {
 
     public static void main(String[] args) {
 

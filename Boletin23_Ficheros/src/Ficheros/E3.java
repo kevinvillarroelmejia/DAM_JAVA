@@ -1,8 +1,10 @@
+package Ficheros;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Scanner;
 
-public class Ejercicio3 {
+public class E3 {
 
     public static void main(String[] args) {
 

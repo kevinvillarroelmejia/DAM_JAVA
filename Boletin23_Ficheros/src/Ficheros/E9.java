@@ -1,8 +1,9 @@
+package Ficheros;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 
-public class Ejercicio9 {
+public class E9 {
 
     public static void main(String[] args) {
         analizarNotas("Redes.txt");

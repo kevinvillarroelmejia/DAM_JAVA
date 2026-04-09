@@ -1,7 +1,8 @@
+package Ficheros;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-public class Ejercicio10 {
+public class E10 {
 
     public static void main(String[] args) {
         analizarDatos("datos.txt");

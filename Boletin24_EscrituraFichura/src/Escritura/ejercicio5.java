@@ -1,4 +1,4 @@
-package boletin_24;
+package Escritura;
 
 import java.util.HashMap;
 import java.util.Scanner;
