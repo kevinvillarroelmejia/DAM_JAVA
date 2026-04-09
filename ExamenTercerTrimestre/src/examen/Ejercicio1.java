@@ -15,6 +15,7 @@ public class Ejercicio1 {
 		AnimesConelMismoID(22, ficheroPersonajes);
 	}
 
+	
 	// FUNCION LEE UN FICHERO Y DEVUELVE UN DICCIONARIO CON UN IDENTIFICADOR(NUM
 	// ANIME) Y SU VALOR(TITULO ANIME)
 	public static HashMap<Integer, String> leerFichero(String fichero) {
