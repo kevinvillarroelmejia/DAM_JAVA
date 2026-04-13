@@ -19,6 +19,7 @@ public class teoriaBasesDatos {
 
         try (Connection conexion=DriverManager.getConnection(server, usuario, password)){//la coneccion la hacemos aqui){
         	System.out.println("Conexion realizada con exito");
+        	//CON ESTE Staement solo se puede avanzar hacia adelante en la base de datos
         	Statement query=conexion.createStatement();
         	
         	//En el ResulSet se pone a lo que queremos tener acceso y la condicion
