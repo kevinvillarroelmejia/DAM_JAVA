@@ -8,15 +8,12 @@ import java.util.HashMap;
 public class Ejercicio1 {
 	public final static String ficheroAnime = "/home/alumno/Escritorio/animes.txt";
 	public final static String ficheroPersonajes = "/home/alumno/Escritorio/personajes.txt";
-
 	public static void main(String[] args) {
 //		System.out.println(leerFichero(ficheroAnime));
 		
 		AnimesConelMismoID(22, ficheroPersonajes);
 	}
 
-	
-	
 	// FUNCION LEE UN FICHERO Y DEVUELVE UN DICCIONARIO CON UN IDENTIFICADOR(NUM
 	// ANIME) Y SU VALOR(TITULO ANIME)
 	public static HashMap<Integer, String> leerFichero(String fichero) {
