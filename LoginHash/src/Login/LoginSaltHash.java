@@ -37,9 +37,9 @@ public class LoginSaltHash {
 			System.out.println("El algoritmo SHA-512 no esta disponible");
 		}
 		return hashTXT;
-		
-		
 	}
+	
+	
 	public static String generarSalt() {
 		SecureRandom azar=new SecureRandom();
 		//tamaño del salt
