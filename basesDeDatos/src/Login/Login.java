@@ -57,7 +57,6 @@ public class Login {
 		String hashString = generarHash(saltContra);
 
 	}
-
 	private static String obtenerContraseya(Scanner teclado) {
 		String contraseya="";
 		String contraseya2="";
@@ -74,7 +73,6 @@ public class Login {
 	}
 
 	private static String obtenerUsuarioUnico() {
-
 		return null;
 	}
 
