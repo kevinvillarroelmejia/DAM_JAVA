@@ -1,5 +1,7 @@
 package Login;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
 import java.security.SecureRandom;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -27,10 +29,10 @@ public class Login {
 				System.out.println("Opcion no valida");
 			} else if (opcion == 1) {
 				iniciarSesion();
-				bandera=true;
+				bandera = true;
 			} else if (opcion == 2) {
 				registrar();
-				bandera=true;
+				bandera = true;
 			}
 		} while (bandera == false);
 
@@ -44,27 +46,56 @@ public class Login {
 	}
 
 	public static void iniciarSesion() {
-		Scanner teclado=new Scanner(System.in);
+		Scanner teclado = new Scanner(System.in);
 		System.out.println("Usuario: ");
-		String usuario=teclado.nextLine();
+		String usuario = obtenerUsuarioUnico();
 		System.out.println("Contraseña: ");
-		String contraseña=teclado.nextLine();
+		String contraseña = obtenerContraseya(teclado);
 //		System.out.println("INCIAR SESION");
-		String salt=generarSalt();
+		String salt = generarSalt();
+		String saltContra = salt + contraseña;
+		String hashString = generarHash(saltContra);
+
+	}
+
+	private static String obtenerContraseya(Scanner teclado) {
+		String contraseya="";
+		String contraseya2="";
+		do {
+			
 		
+		System.out.println("Contraseña: ");
+		contraseya=teclado.nextLine();
+		System.out.println("Repite con contraseña: ");
+		contraseya2=teclado.nextLine();
+		if(!contraseya.equals(contraseya2)) {
+			System.out.println("Las contraseñas no coinciden");
+		}
+		}while(!contraseya.equals(contraseya2));
+		return contraseya;
+	}
+
+	private static String obtenerUsuarioUnico() {
+
+		return null;
 	}
 
 	public static void registrar() {
-		System.out.println("REGISTRAR");
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("-- REGISTRAR NUEVO USUARIO --");
+		System.out.println("Nombre NUEVO USUARIO: ");
+		String nombreUsuario = teclado.nextLine();
+		System.out.println("Contraseña");
 	}
 
+	/* por que no utilizar el thowr */
 	public static void existeBBDD(String server, String usuario, String passwd) {
-		try (Connection conexion = DriverManager.getConnection(server, usuario, passwd)) {// la coneccion la hacemos
-																							// aqui){
+		Scanner teclado = new Scanner(System.in);
+		try (Connection conexion = DriverManager.getConnection(server, usuario, passwd)) {
 			System.out.println("Conexion realizada con exito");
 			String query1 = "CREATE DATABASE IF NOT EXIST datosPersonales";
 			String query2 = "Use datosPersonales";
-			String query3 = "CREATE TABLE IF NOT EXIST credenciales(usuario varchar(50), saltTXT varchar(50), hashTXT varchar(128), email varchar(50), privilegios int)";
+			String query3 = "CREATE TABLE IF NOT EXIST credenciales(usuario varchar(50) primary_key, saltTXT varchar(24), hashTXT varchar(88), email varchar(50), privilegios int)";
 
 			Statement consulta = conexion.createStatement();
 			consulta.executeUpdate(query1);
@@ -83,6 +114,21 @@ public class Login {
 		azar.nextBytes(salt);
 		String saltTXT = Base64.getEncoder().encodeToString(salt);
 		return saltTXT;
+	}
+
+	// funcion que genere el hash
+	public static String generarHash(String saltMasContra) {
+		MessageDigest digest;
+		String hashTXT = null;
+		try {
+			digest = MessageDigest.getInstance("SHA-521");
+			byte[] hash = digest.digest(saltMasContra.getBytes(StandardCharsets.UTF_8));
+			hashTXT = Base64.getEncoder().encodeToString(hash);// esa cadena de hast lo convertimos a String legible
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("El algoritmo SHA-512 no esta disponible");
+		}
+		return hashTXT;
 	}
 
 }
