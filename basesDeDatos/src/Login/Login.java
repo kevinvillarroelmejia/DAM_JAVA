@@ -62,8 +62,6 @@ public class Login {
 		String contraseya="";
 		String contraseya2="";
 		do {
-			
-		
 		System.out.println("Contraseña: ");
 		contraseya=teclado.nextLine();
 		System.out.println("Repite con contraseña: ");
