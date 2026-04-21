@@ -14,7 +14,7 @@ public class Login {
 	public static void main(String[] args) {
 		String usuario = "admin";
 		String password = "1234";
-		String server = "jdbc:mysql://localhost:3306/";
+		String server = "jdbc:mysql://localhost:3306/datosPersonales";
 		mostrarMenu();
 		Scanner teclado = new Scanner(System.in);
 		int opcion = 0;
@@ -87,12 +87,12 @@ public class Login {
 	/* por que no utilizar el thowr */
 	public static void existeBBDD(String server, String usuario, String passwd) {
 		Scanner teclado = new Scanner(System.in);
+		String query1 = "CREATE DATABASE IF NOT EXIST datosPersonales";
+		String query2 = "Use datosPersonales";
+		String query3 = "CREATE TABLE IF NOT EXIST credenciales(usuario varchar(50) primary_key, saltTXT varchar(24), hashTXT varchar(88), email varchar(50), privilegios int)";
+
 		try (Connection conexion = DriverManager.getConnection(server, usuario, passwd)) {
 			System.out.println("Conexion realizada con exito");
-			String query1 = "CREATE DATABASE IF NOT EXIST datosPersonales";
-			String query2 = "Use datosPersonales";
-			String query3 = "CREATE TABLE IF NOT EXIST credenciales(usuario varchar(50) primary_key, saltTXT varchar(24), hashTXT varchar(88), email varchar(50), privilegios int)";
-
 			Statement consulta = conexion.createStatement();
 			consulta.executeUpdate(query1);
 			consulta.executeUpdate(query2);
