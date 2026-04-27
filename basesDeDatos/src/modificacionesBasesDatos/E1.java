@@ -12,12 +12,10 @@ public class E1 {
 
 	public static void main(String[] args) {
 
-		
 		/*executeQuery() --Cuando hacemos un SELECT
 		 *executeUpdate() --Cuando hacemos un modificaciones*/
 		
-
-		String usuario = "admin";
+		String usuario = "root";
         String password = "1234";
 
         //con esto seleccionamos la base de datos si no ponemos sakila es como solo estar dentro del servidor
@@ -51,7 +49,6 @@ public class E1 {
         	String query1="CREATE DATABASE IF NOT EXIST agenda";
         	String query2="Use agenda";
         	String query3="CREATE TABLE IF NOT EXIST personas(telefono int(9), primary_Key, nombre varchar(50))";
-        	
         	
         	Statement consulta=conexion.createStatement();
         	consulta.executeUpdate(query1);
