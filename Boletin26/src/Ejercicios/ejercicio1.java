@@ -15,7 +15,7 @@ public class ejercicio1 {
 		 * empleados con el apellido Patterson y ninguno con el apellido Morales. A Mary
 		 * Patterson le reportan 4 personas, a William tres y a Steve nadi
 		 */
-		String usuario = "root"; // en casa root
+		String usuario = "admin"; // en casa root
 		String password = "1234";
 		String server = "jdbc:mysql://localhost:3306/classicmodels";
 		String apellido = "Patterson";

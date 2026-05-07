@@ -21,7 +21,7 @@ public class ejercicio2 {
 		 * 666 tampoco y el cliente Warburg Exchange no tiene asignado ningún empleado.
 		 * El cliente Kelly's Gift Shop tiene asignado como empleado a Peter Marsh.
 		 */
-		String usuario = "root"; 
+		String usuario = "admin"; 
 		String password = "1234";
 		String server = "jdbc:mysql://localhost:3306/classicmodels";
 		int codigoEmpleado=1621;

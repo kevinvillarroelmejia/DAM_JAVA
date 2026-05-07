@@ -23,7 +23,7 @@ public class ejercicio3 {
 		 * igual a 10 unidades
 		 */
 
-		String usuario = "root"; // en casa root
+		String usuario = "admin"; // en casa root
 		String password = "1234";
 
 		String server = "jdbc:mysql://localhost:3306/classicmodels";
