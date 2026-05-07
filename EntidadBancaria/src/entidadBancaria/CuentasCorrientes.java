@@ -15,7 +15,6 @@ public class CuentasCorrientes {
 		this.sucursal=sucursal;
 		this.codigo=codigo;
 		
-		
 		clientes.anydeCuenta(this);
 		sucursal.ayadirCuenta(this);
 	}
