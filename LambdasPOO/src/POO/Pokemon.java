@@ -1,4 +1,4 @@
-package POO_Lambdas;
+package POO;
 
 public class Pokemon implements Comparable<Pokemon>{
 	private int codigo;

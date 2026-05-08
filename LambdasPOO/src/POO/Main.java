@@ -1,4 +1,4 @@
-package POO_Lambdas;
+package POO;
 
 import java.util.ArrayList;
 import java.util.Collections;
