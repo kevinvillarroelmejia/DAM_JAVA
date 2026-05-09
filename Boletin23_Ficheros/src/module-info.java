@@ -4,5 +4,5 @@
 /**
  * 
  */
-module Ejercicios23_Ficheros {
+module Boletin23_Ficheros {
 }
