@@ -20,15 +20,10 @@ public class Main {
 			//leerBaseDatos(conexion);
 			for (Pokemon pokemon : guardarPokemon(conexion)) {
 				System.out.println(pokemon);
-			}
-			
-			
-			
+			}	
 		}catch (SQLException e) {
 			System.out.println("Error " +e.getMessage());
-			
 		}
-		
 	}
 
 	private static void leerBaseDatos(Connection conexion) throws SQLException{
