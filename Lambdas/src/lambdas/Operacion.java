@@ -10,9 +10,5 @@ public interface Operacion {
 	
 	//si hago dos metodos da error
 	//String saludar(String uno,String dos);
-	
-	
-	
-	
 
 }
