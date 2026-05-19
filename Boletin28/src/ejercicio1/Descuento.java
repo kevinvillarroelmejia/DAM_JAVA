@@ -1,9 +1,10 @@
 package ejercicio1;
 
+@FunctionalInterface
 public interface Descuento {
 	
 	
-	double descuento10(double a ,int b);
+	double descuento(double a ,int b);
 
 
 }

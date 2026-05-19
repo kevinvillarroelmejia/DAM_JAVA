@@ -4,6 +4,7 @@ public class MainDescuento {
 	
 	public static void main(String[] args) {
 		
+		//CONSTANTES QUE NO SE PUEDEN MODIFICAR
 		final int DESCUENTO_10_EUROS=1;
 		final int DESCUENTO_20_PORCIENTO=2;
 		final int SIN_DESCUENTO=3;
@@ -20,9 +21,9 @@ public class MainDescuento {
 			return precioFinal;
 		};
 		
-		System.out.println("Precio final: "+descuento1.descuento10(100, DESCUENTO_10_EUROS));
-		System.out.println("Precio final: "+descuento1.descuento10(300, DESCUENTO_20_PORCIENTO));
-		System.out.println("Precio final: "+descuento1.descuento10(900, SIN_DESCUENTO));
+		System.out.println("Precio final: "+descuento1.descuento(100, DESCUENTO_10_EUROS));
+		System.out.println("Precio final: "+descuento1.descuento(300, DESCUENTO_20_PORCIENTO));
+		System.out.println("Precio final: "+descuento1.descuento(900, SIN_DESCUENTO));
 
 	}
 }
