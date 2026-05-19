@@ -17,5 +17,4 @@ public class Sombra extends Personaje implements Mago,Ladron{
 		int daño=(int)(Math.random()*(getInteligencia()-1+1)+1);
 		return daño;
 	}
-	
 }
