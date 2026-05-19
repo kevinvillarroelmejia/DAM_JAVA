@@ -14,8 +14,8 @@ public class Sombra extends Personaje implements Mago,Ladron{
 
 	@Override
 	public int hechizo() {
-		// TODO Auto-generated method stub
-		return 0;
+		int daño=(int)(Math.random()*(getInteligencia()-1+1)+1);
+		return daño;
 	}
 	
 }
