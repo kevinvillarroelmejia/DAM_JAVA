@@ -14,7 +14,7 @@ public class Main {
 	}
 
 	public static void listarEmpleadosPais(String paisPedido) {
-		String usuario = "admin";
+		String usuario = "root";
 		String password = "1234";
 		String server = "jdbc:mysql://localhost:3306/classicmodels";
 		
@@ -51,7 +51,7 @@ public class Main {
 	 * 
 	 * */
 	public static void moverEmpleadosDeOficina(String ciudadAntigua , String ciudadNueva) {
-		String usuario = "admin";
+		String usuario = "root";
 		String password = "1234";
 		String server = "jdbc:mysql://localhost:3306/classicmodels";
 		try (Connection conexion = DriverManager.getConnection(server, usuario, password)) {

@@ -7,6 +7,7 @@ public interface Jubilada {
 	 * finales
 	 * */
 	int EDAD_JUBILADOS=67;
+
 	
 	
 	//el metodo es abstracto por defecto

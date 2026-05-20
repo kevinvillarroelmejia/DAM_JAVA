@@ -24,12 +24,8 @@ public class Main {
 			Collections.sort(listaPokemon);
 			for (Pokemon pokemon : listaPokemon) {
 				System.out.println(pokemon);
-<<<<<<< HEAD
 			}	
-=======
-			}
 			
->>>>>>> branch 'main' of https://github.com/kevinrashiid/DAM_JAVA
 		}catch (SQLException e) {
 			System.out.println("Error " +e.getMessage());
 		}
