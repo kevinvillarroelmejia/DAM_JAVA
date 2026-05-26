@@ -1,8 +1,8 @@
-package boletin7;
+package Boletin7;
 
 import java.util.Scanner;
 
-public class ejercicio8_Buscaminas {
+public class E8_BuscaMinas {
 	final static int MINA = 1; // variable constante global
 
 	public static void main(String[] args) {
@@ -26,8 +26,6 @@ public class ejercicio8_Buscaminas {
 		// MINAS 1
 		// SIN MINA 0
 
-		// primer[FILA][COLUMNA]
-
 		int lado = 0;// lados del tablero
 		int minas = 0; // minas que va tener el tablero
 
@@ -35,7 +33,6 @@ public class ejercicio8_Buscaminas {
 		Scanner teclado = new Scanner(System.in);//fuera del while mas eficiente
 
 		do {
-
 			try { //CAPTURA DE ERRORES 
 				System.out.println("De cuantos lados es el tablero?: ");
 				lado = teclado.nextInt();//pedidosmos el lado
@@ -84,12 +81,5 @@ public class ejercicio8_Buscaminas {
 			}
 		}
 	}
-//	int[] tablero=new int[5];
-//	mostrarTablero(tablero);
-//	public static void mostrarTablero(int[] tablero) {
-//		for(int i=0; i <5;i++) {
-//			System.out.print(tablero[i]+" ");
-//		}
-//	}
 
 }
