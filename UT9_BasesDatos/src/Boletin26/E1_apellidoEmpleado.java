@@ -26,8 +26,6 @@ public class E1_apellidoEmpleado {
 		}
 		catch (SQLException e) {
 			System.out.println("ERROR 1"+e.getMessage());
-			
-			
 		}
 	}
 	// Busca empleados por apellido y lista quién les reporta (subordinados)

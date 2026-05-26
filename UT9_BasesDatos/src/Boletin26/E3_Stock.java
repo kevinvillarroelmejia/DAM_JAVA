@@ -12,6 +12,14 @@ public class E3_Stock {
 		//root --> casa 
 		//admin --> clase
 		
+		/*
+		 * INSERT INTO tabla (columna1, columna2, columna3) VALUES (?, ?, ?)"
+		 * SELECT * FROM tabla WHERE columna = ?ç
+		 * INSERT INTO tabla (columna1, columna2, columna3) VALUES (?, ?, ?)
+		 * UPDATE tabla SET columna1 = ?, columna2 = ? WHERE columna3 = ?
+		 * DELETE FROM tabla WHERE columna = ?
+		 * */
+		
 		String usuario = "root";
 		String password = "1234";
 		String server = "jdbc:mysql://localhost:3306/classicmodels";
@@ -26,7 +34,8 @@ public class E3_Stock {
 	}
 	private static void consultarStock(Connection conexion, int numero) throws SQLException {
 		PreparedStatement query = conexion
-				.prepareStatement("SELECT productName,productCode,quantityInStock FROM products WHERE quantityInStock <= ? ;",ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+				.prepareStatement("SELECT productName,productCode,quantityInStock FROM products WHERE quantityInStock <= ? ;"
+						,ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 		query.setInt(1, numero);
 		ResultSet resultado = query.executeQuery();
 		resultado.last();
