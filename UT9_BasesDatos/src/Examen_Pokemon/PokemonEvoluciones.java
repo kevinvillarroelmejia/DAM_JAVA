@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class PokemonEvoluciones {
 
     public static void main(String[] args) {
-        String usuario = "root";
+        String usuario = "admin";
         String password = "1234";
         String server = "jdbc:mysql://localhost:3306/pokemondb";
 

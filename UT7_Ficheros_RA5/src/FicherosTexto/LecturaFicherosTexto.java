@@ -47,7 +47,7 @@ public class LecturaFicherosTexto {
 			System.out.println("Error al leer: " + e.getMessage());
 		}
 	}
- 
+
 	// FORMA 4 - Todo de golpe en un solo String
 	public static void lectura4() {
 		Path ruta = Path.of("/mnt/temp/quijote.txt");
