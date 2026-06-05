@@ -12,6 +12,9 @@ public class RA8_PersistenciaDeObjetos {
 	static String fichero = "votos.dat";
 	static String[] partidos = { "PA", "PB", "PC", "PD" };
 
+	
+	
+	//ESTE EJERCICIO SE PODIA RESOLVER CON FICHEROS BINARIOS SIN OBJETOS
 	public static void main(String[] args) {
 		inicializarFichero(fichero);
 		ayadirVotos("PC", 30);
