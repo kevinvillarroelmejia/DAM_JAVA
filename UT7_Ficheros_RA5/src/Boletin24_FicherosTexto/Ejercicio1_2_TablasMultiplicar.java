@@ -1,4 +1,4 @@
-package Boletin23_FicherosTexto;
+package Boletin24_FicherosTexto;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.Scanner;
 
-public class Ejercicio1_2 {
+public class Ejercicio1_2_TablasMultiplicar {
 
 	static String ficheroRuta = "/home/alumno/Escritorio/tabla-n.txt";
 
