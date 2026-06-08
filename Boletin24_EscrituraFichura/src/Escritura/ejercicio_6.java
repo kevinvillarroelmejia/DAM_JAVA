@@ -22,23 +22,18 @@ public class ejercicio_6 {
 
 		soluciones = leeSoluciones(fSoluciones);
 		respuestas = leeRespuestas(fRespuestas);
-
 		grabarNotas(fNotas, soluciones, respuestas);
 	}
 
 	public static String[] leeSoluciones(String fichero) {
-
 		Path ruta = Path.of(fichero);
 		String linea = null;
-
 		try {
 			linea = Files.readString(ruta);
 		} catch (Exception e) {
 			System.out.println("Error: " + e.getMessage());
 		}
-
 		String[] soluciones = linea.split(",\\s*");
-
 		return soluciones;
 	}
 
