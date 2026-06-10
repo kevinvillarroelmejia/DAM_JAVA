@@ -19,8 +19,8 @@ public class Ejercicio2Main {
 	public static void main(String[] args) {
 		HashMap<Integer, String> diccionarioAnimes = lecturaAnimes();
 //		mostrarSalida(diccionarioAnimes);
-		leerFichero();
 		ArrayList<Personaje> lista=listaPersonajeCoincidencia(diccionarioAnimes);
+		leerFichero();
 	}
 
 	// leemos fichero animes
@@ -52,15 +52,14 @@ public class Ejercicio2Main {
 				while ((linea = lector.readLine()) != null) {
 					int clavePersonaje = Integer.parseInt(linea.substring(0, linea.indexOf(" ")));
 					if (clavePersonaje == anime.getKey()) {
-						Personaje personaje=new Personaje(anime.getValue(), linea);
+						String nombrePersonaje = linea.substring(linea.indexOf(" ") + 1);
+						Personaje personaje=new Personaje(anime.getValue(), nombrePersonaje);
 						listaPersonajes.add(personaje);
 					}
 				}
 			}
 			try (ObjectOutputStream binario = new ObjectOutputStream(new FileOutputStream(rutaFicheroDat))) {
-				for (Personaje personajeAnime: listaPersonajes) {
-					binario.writeObject(personajeAnime);
-				}
+					binario.writeObject(listaPersonajes);
 			} catch (Exception e) {
 				System.err.println("Error: " + e.getMessage());
 				e.printStackTrace();
@@ -73,12 +72,11 @@ public class Ejercicio2Main {
 	}
 
 	public static void leerFichero() {
-		Personaje personaje = null;
 		try (ObjectInputStream binario = new ObjectInputStream(new FileInputStream(rutaFicheroDat))) {
-			
-			personaje = (Personaje) binario.readObject();
-			System.out.println(personaje);
-
+			ArrayList<Personaje> lista = (ArrayList<Personaje>) binario.readObject();
+			for (Personaje p : lista) {
+			    System.out.println(p);
+			}
 		} catch (Exception e) {
 			System.err.println("Error: " + e.getMessage());
 			e.printStackTrace();

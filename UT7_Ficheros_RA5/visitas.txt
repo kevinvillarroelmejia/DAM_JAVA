@@ -1,0 +1,11 @@
+Laura Garcia;Luna;Perro;45.50
+Pedro Ruiz;Michi;Gato;30.00
+Laura Garcia;Luna;Perro;25.00
+Ana Lopez;Rocky;Perro;60.75
+Pedro Ruiz;Nemo;Pez;15.00
+Laura Garcia;Kira;Gato;35.20
+LINEA MAL FORMATEADA
+Ana Lopez;Rocky;Perro;abc
+Pedro Ruiz;Michi;Gato;40.00
+Carlos Diaz;Thor;Perro;55.00
+Ana Lopez;Coco;Loro;22.50
