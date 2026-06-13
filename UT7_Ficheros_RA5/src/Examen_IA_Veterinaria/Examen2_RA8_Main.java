@@ -16,11 +16,6 @@ public class Examen2_RA8_Main {
 		leerBinarioVisitas("Gato");
 
 
-//		leerBinarioVisitas("Gato");
-//		for(Visitas visita:listaVisitas) {
-//			System.out.println(visita);
-//		}
-
 	}
 
 	public static ArrayList<Visitas> leerVisitasGuardasVisitas() {
@@ -51,7 +46,6 @@ public class Examen2_RA8_Main {
 		return listaVisita;
 	}
 
-//
 	public static void leerBinarioVisitas(String especieAnimal) {
 		ArrayList<Visitas> lista = new ArrayList<Visitas>();
 		try (ObjectInputStream binario = new ObjectInputStream(new FileInputStream(binarioVisitasDat))) {
@@ -59,11 +53,19 @@ public class Examen2_RA8_Main {
 		} catch (Exception e) {
 			System.err.println("Error: " + e.getMessage());
 		}
+		Visitas visitaMasCara=lista.get(0); //asigna el primer objeto
 		for(Visitas visita:lista) {
-			if(visita.getEspecie().equalsIgnoreCase("Gato")) {
+			if(visita.getEspecie().equalsIgnoreCase(especieAnimal)) {
 				System.out.println(visita);
 			}
+			if(visita.getCosteVisita()>visitaMasCara.getCosteVisita()) {
+				visitaMasCara=visita;
+			}
 		}
+		System.out.println("La visita mas cara: "+visitaMasCara+"("+visitaMasCara.getCosteVisita()+")");
 	}
+	
+	
+	
 
 }

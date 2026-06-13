@@ -21,6 +21,9 @@ public class Visitas implements Serializable{
 		this.costeVisita=costeVisita;
 		listaVisitas.add(this);
 	}
+	public double getCosteVisita() {
+		return costeVisita;
+	}
 	@Override
 	public String toString() {
 		String linea="- "+this.nombreCliente+" llevo a "+this.nombreMascota;
