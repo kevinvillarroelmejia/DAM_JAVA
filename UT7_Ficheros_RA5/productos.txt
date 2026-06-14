@@ -1,0 +1,10 @@
+Laptop,Electrónica,899.99
+Mouse,Electrónica,25.50
+Teclado,Electrónica,75.00
+Monitor,Electrónica,199.99
+Auriculares,Electrónica,45.00
+Lámpara,Hogar,35.50
+Almohada,Hogar,20.00
+Sábanas,Hogar,60.00
+Sofá,Hogar,450.00
+Escritorio,Hogar,150.00
